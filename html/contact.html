@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../images/logo.png" type="image/x-icon">
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <!--Custom Style CSS-->
+    <link rel="stylesheet" href="../css/style-contact.css">
+    <title>Contact US</title>
+</head>
+<body>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                   <a href="index.html"><img src="../images/logo.png" alt="Logo" width="125px"></a> 
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="all-product-page-1.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+              <a href="cart.html">  <img src="../images/cart.png" alt="cart" width="30px" height="30px"></a>
+                <img src="../images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+
+    <!--Account Page-->
+        <div class="account-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="../images/contact-us.jpg" width="100%">
+                    </div>
+                    <div class="col-2">
+                        <div class="form-container">
+                            <div class="form-btn">
+                                
+                                <span onclick="register()">Contact</span>
+                            </div>
+                
+                            <form id="RegForm">
+                                <p id="txt">Full Name</p>
+                                <input type="text" placeholder="Enter Full Name">
+                                <p id="txt">Phone Number</p>
+                                <input type="text" placeholder="Enter Phone Number">
+                                <p id="txt">Email</p>
+                                <input type="email" placeholder="Enter email">
+                                <p id="txt">Enter you message here</p>
+                                <textarea  class="feedback" cols="30" rows="10"></textarea>
+                                <button type="submit" class="btn">Sent Feedback</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                
+                <div class="footer-col-2">
+                    <img src="../images/logo-white.png">
+					<address>Address: #68, Street 430, Sangkat Boeng Tumpun, Khan Mean Chey, Phnom Penh.</address>
+				<a href="tel:+00000000"></a>
+                <a href="tel:+11111111"></a>
+                </div>
+                
+                <div class="footer-col-4">
+                    <h3>Google Map</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d977.313465475322!2d104.91309882922468!3d11.533638313512725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDMyJzAxLjEiTiAxMDTCsDU0JzQ5LjEiRQ!5e0!3m2!1sen!2skh!4v1600694092050!5m2!1sen!2skh" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                 </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2020 | Red Store</p>
+        </div>
+    </div>
+   <!--JS for Toggle Menu-->
+   <script>
+       var MenuItems = document.getElementById("MenuItems");
+       MenuItems.style.maxHeight="0px";
+        function menutoggle() {
+            if(MenuItems.style.maxHeight=="0px")
+            {
+                MenuItems.style.maxHeight="200px";
+            }
+            else{
+                MenuItems.style.maxHeight="0px";
+            }
+        }
+   </script>
+    <!--JS for Login Form-->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+        function register() {
+            RegForm.style.transform="translateX(0px)";
+            LoginForm.style.transform="translateX(0px)";
+            Indicator.style.transform="translateX(100px)";
+        }
+        function login() {
+            RegForm.style.transform="translateX(300px)";
+            LoginForm.style.transform="translateX(300px)";
+            Indicator.style.transform="translateX(0px)";
+        }
+    </script>
+</body>
+</html>
